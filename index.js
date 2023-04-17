@@ -19,9 +19,12 @@ app.use(function (req, res, next) {
 dotenv.config();
 //routes
 const AuthRoute = require("./routes/auth");
+const Cumbigroup = require("./routes/cumbigroup");
+
 const port = process.env.PORT || 4000;
 
 //routes
 app.use("/api/auth", AuthRoute);
+app.use("/api/cumbi", Cumbigroup);
 
 app.listen(port, () => console.log("servidor esta ligado"));
