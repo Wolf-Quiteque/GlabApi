@@ -2,9 +2,6 @@ const router = require("express").Router();
 const clientPromise = require("../../db/conexao");
 
 router.post("/", async (req, res) => {
-  console.log(req.body);
-
-  return;
   try {
     const cliente = await clientPromise;
     const db = cliente.db("glab_admin");
