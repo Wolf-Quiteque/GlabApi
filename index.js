@@ -25,6 +25,6 @@ const port = process.env.PORT || 4000;
 
 //routes
 app.use("/api/auth", AuthRoute);
-app.use("/api/cumbi", Cumbigroup);
+app.use("/api/aef", Cumbigroup);
 
 app.listen(port, () => console.log("servidor esta ligado"));
