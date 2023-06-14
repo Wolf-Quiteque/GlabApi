@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const clientPromise = require("../../db/conexao");
 
-router.post("/allactivites", async (req, res) => {
+router.get("/allactivites", async (req, res) => {
  try {
 
     const cliente = await clientPromise;
@@ -14,7 +14,7 @@ router.post("/allactivites", async (req, res) => {
   }
 }); 
 
-router.post("/pesquisas", async (req, res) => {
+router.get("/pesquisas", async (req, res) => {
   try {
  
      const cliente = await clientPromise;
