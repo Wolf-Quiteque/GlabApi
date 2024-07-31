@@ -3,8 +3,7 @@ const clientPromise = require("../../db/conexao");
 
 router.get("/allactivites", async (req, res) => {
  try {
-    const resul = await db.collection("actividades").find({}).toArray();
-const cliente = await clientPromise;
+    const cliente = await clientPromise;
 const db = cliente.db("aef");
 const resul = await db.collection("actividades").find({})
     .sort({ _id: -1 })
