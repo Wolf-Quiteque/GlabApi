@@ -27,7 +27,7 @@ router.get("/pesquisas", async (req, res) => {
    }
  });
 
- router.get("/comprovativos", async (req, res) => {
+ router.post("/comprovativos", async (req, res) => {
   try {
  
      const cliente = await clientPromise;
@@ -45,7 +45,7 @@ router.get("/pesquisas", async (req, res) => {
  
      const cliente = await clientPromise;
      const db = cliente.db("destinos");
-     const resul = await db.collection("comprovativos").insertOne(req.body);
+     const resul = await db.collection("comprovativos").insertOne(req.body)
      return res.status(200).json(resul);
    } catch (err) {
      res.status(500).json(err);
